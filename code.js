@@ -17,7 +17,7 @@ document.querySelector("#Start").addEventListener("click", displayQ)
     let input = document.querySelector("input")
     document.querySelector("#Answer").addEventListener("click", checkAnswer) 
     function checkAnswer(){
-        if (input.value===question[0].answer){
+        if (input.value.toLowerCase()===question[0].answer.toLowerCase()){
         console.log("you are correct")
         score += 1
         display.innerHTML+=`<p>You are Correct</p>
