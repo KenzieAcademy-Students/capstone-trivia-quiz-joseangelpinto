@@ -1,1 +1,113 @@
 /* Write your CSS Here. */
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    box-sizing: border-box;
+}
+
+div {
+    position:relative;
+    margin:3% 0mm; 
+    padding:3mm 2mm;
+    width: 100%;
+    height: 50%;
+    color:whitesmoke;
+    font-size:15px;
+    line-height: 20px;
+    text-transform: initial;
+    font: 'Arial';
+    position: justify;
+    text-align: center;
+    justify-content: center;
+      
+}
+
+h1:before {
+    content: '';
+    animation: changingTxt 8s linear infinite;
+    padding:10mm 0mm;
+    width: 100px;
+    height:100px;
+    color:cornflowerblue;
+    font-size:40px;
+    font-family: 'Arial';
+    line-height: 10px;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase
+    
+}
+
+h2 {
+    color: whitesmoke;
+    padding:15mm 2mm;
+    width: 500px;
+    height: 10px;
+    font-size: 42px;
+    text-transform: initial;
+    font: 'Arial';
+   position: justify;
+  
+}
+button {
+    background-color: crimson;
+    padding:1mm 4mm;
+    font-family:Fantasy;
+    line-height: 20px;
+    text-transform: initial;
+    font-style: oblique;
+    font-size: 20px;
+    text-transform: uppercase
+}
+
+@keyframes changingTxt {
+    0%{
+        content: 'THIS GAME IS AMAZING';
+    }
+    20%{
+        content: 'YOU CAN DO IT';
+    }
+    40%{
+        content: 'LET IS GO IT IS EASY';
+    }
+    60%{
+        content:'YOU CAN DO IT';
+    }
+    100%{
+        content:'START GAME';
+    }
+}
+
+.animate-bg:before, .animate-bg:after{
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: -8px;
+    background: linear-gradient(120deg, #79fb00, #8d01a0, #031ba5, #ff004c,
+    #e6036d, #fb0094, #ff6600, #04c2e4, #adad02, #00c3ff);
+    background-size: 300%;
+    width: calc(100% + 16px);
+    height: calc(50% + 16px);
+    z-index: -1;
+    animation: BGgradient 5s ease infinite;
+    
+}
+
+@keyframes BGgradient {
+    0% {
+        background-position: 0% 200%;
+    }
+    50% {
+        background-position: 200% 0%;
+    }
+    100% {
+        background-position: 0% 330%;
+    }
+}
+.animate-bg:after {
+    filter: brightness(1.4);
+    filter: drop-shadow(16px 16px 20px rgb(248, 220, 97));
+    filter: blur(15px)
+}
